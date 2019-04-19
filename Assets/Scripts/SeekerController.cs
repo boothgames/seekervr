@@ -17,4 +17,12 @@ public class SeekerController : MonoBehaviour
         var movement = new Vector3(moveHorizontal, 0.0f, moveVertical); // ball doesn't have to move up, so y=0
         rb.AddForce(movement * speed);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("pickup"))
+        {
+            other.gameObject.SetActive(false);
+        }
+    }
 }
