@@ -1,20 +1,35 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Timers;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class SeekerController : MonoBehaviour
 {
+    public float speed = 20;
+    public float gameTime = 60;
+    public Text countText;
+    public Text finalText;
+
     private Rigidbody rb;
     private int count;
-    public float speed = 1.0f;
     private int TOTAL_PICKUPS;
-    public Text countText;
-    public Text winText;
+    private float timeLeft;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         TOTAL_PICKUPS = GameObject.FindGameObjectsWithTag("pickup").Length;
         countText.text = displayCount();
+        timeLeft = gameTime;
+    }
+
+    private void LateUpdate()
+    {
+        timeLeft -= Time.deltaTime;
+        if (timeLeft < 0 && count < TOTAL_PICKUPS)
+        {
+            finalText.text = "Game Over. Reset to play again";
+        }
     }
 
     private void FixedUpdate()
@@ -44,7 +59,7 @@ public class SeekerController : MonoBehaviour
         countText.text = displayCount();
         if (count == TOTAL_PICKUPS)
         {
-            winText.text = "You Win";
+            finalText.text = "You Win";
         }
     }
 

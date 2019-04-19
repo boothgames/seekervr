@@ -242,8 +242,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  gameTime: 60
   countText: {fileID: 1376752849}
-  winText: {fileID: 1878396367}
+  finalText: {fileID: 1878396367}
 --- !u!4 &93744435 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5309761638697432288, guid: dcca085f6081c4aa8aaca390142a8a30,
@@ -1562,7 +1563,7 @@ GameObject:
   - component: {fileID: 1376752850}
   - component: {fileID: 1376752849}
   m_Layer: 5
-  m_Name: countText
+  m_Name: CountText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1737,7 +1738,7 @@ GameObject:
   - component: {fileID: 1878396368}
   - component: {fileID: 1878396367}
   m_Layer: 5
-  m_Name: winText
+  m_Name: FinalText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
