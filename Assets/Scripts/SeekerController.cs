@@ -8,6 +8,7 @@ public class SeekerController : MonoBehaviour
     public float speed = 1.0f;
     private int TOTAL_PICKUPS;
     public Text countText;
+    public Text winText;
 
     private void Start()
     {
@@ -28,8 +29,17 @@ public class SeekerController : MonoBehaviour
     {
         if (!other.gameObject.CompareTag("pickup")) return;
         other.gameObject.SetActive(false);
+        updateCount();
+    }
+
+    private void updateCount()
+    {
         count += 1;
         countText.text = displayCount();
+        if (count == TOTAL_PICKUPS)
+        {
+            winText.text = "You Win";
+        }
     }
 
     private string displayCount()
