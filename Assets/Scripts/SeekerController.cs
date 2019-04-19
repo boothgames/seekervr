@@ -9,6 +9,7 @@ public class SeekerController : MonoBehaviour
     public float gameTime = 60;
     public Text countText;
     public Text finalText;
+    public Text timerText;
 
     private Rigidbody rb;
     private int count;
@@ -19,13 +20,20 @@ public class SeekerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         TOTAL_PICKUPS = GameObject.FindGameObjectsWithTag("pickup").Length;
-        countText.text = displayCount();
         timeLeft = gameTime;
+        countText.text = displayCount();
+        timerText.text = "Time Left: " + (int) timeLeft + " s";
+        finalText.text = "";
     }
 
     private void LateUpdate()
     {
         timeLeft -= Time.deltaTime;
+        if (timeLeft >= 0)
+        {
+            timerText.text = "Time Left: " + (int) timeLeft + " s";
+        }
+
         if (timeLeft < 0 && count < TOTAL_PICKUPS)
         {
             finalText.text = "Game Over. Reset to play again";
