@@ -65,7 +65,7 @@ public class SeekerController : MonoBehaviour
     {
         count += 1;
         countText.text = displayCount();
-        if (count == TOTAL_PICKUPS)
+        if (timeLeft >= 0 && count == TOTAL_PICKUPS)
         {
             finalText.text = "You Win";
         }
