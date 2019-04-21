@@ -44,11 +44,6 @@ public class SeekerController : MonoBehaviour
     {
         var moveHorizontal = Input.GetAxis("Horizontal");
         var moveVertical = Input.GetAxis("Vertical");
-        if (SystemInfo.deviceType == DeviceType.Handheld)
-        {
-            moveHorizontal = Input.acceleration.x;
-            moveVertical = Input.acceleration.y;
-        }
 
         var movement = new Vector3(moveHorizontal, 0.0f, moveVertical); // ball doesn't have to move up, so y=0
         rb.AddForce(movement * speed);
