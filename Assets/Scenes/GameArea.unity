@@ -641,6 +641,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pickup10
       objectReference: {fileID: 0}
+    - target: {fileID: 5309761638697432289, guid: dcca085f6081c4aa8aaca390142a8a30,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5309761638697432288, guid: dcca085f6081c4aa8aaca390142a8a30,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1557,6 +1562,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pickup9
       objectReference: {fileID: 0}
+    - target: {fileID: 5309761638697432289, guid: dcca085f6081c4aa8aaca390142a8a30,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5309761638697432288, guid: dcca085f6081c4aa8aaca390142a8a30,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1831,6 +1841,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pickup11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5309761638697432289, guid: dcca085f6081c4aa8aaca390142a8a30,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5309761638697432288, guid: dcca085f6081c4aa8aaca390142a8a30,
         type: 3}
@@ -2122,6 +2137,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pickup12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5309761638697432289, guid: dcca085f6081c4aa8aaca390142a8a30,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5309761638697432288, guid: dcca085f6081c4aa8aaca390142a8a30,
         type: 3}
